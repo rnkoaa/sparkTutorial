@@ -13,7 +13,7 @@ public class CollectExample {
 
     public static void main(String[] args) throws Exception {
         Logger.getLogger("org").setLevel(Level.ERROR);
-        SparkConf conf = new SparkConf().setAppName("collect").setMaster("local[*]");
+        SparkConf conf = new SparkConf().setAppName("collect").setMaster("local[1]");
         JavaSparkContext sc = new JavaSparkContext(conf);
 
         List<String> inputWords = Arrays.asList("spark", "hadoop", "spark", "hive", "pig", "cassandra", "hadoop");

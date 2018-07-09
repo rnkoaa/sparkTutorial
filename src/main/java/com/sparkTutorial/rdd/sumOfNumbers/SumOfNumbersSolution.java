@@ -21,7 +21,7 @@ public class SumOfNumbersSolution {
 
         JavaRDD<String> validNumbers = numbers.filter(number -> !number.isEmpty());
 
-        JavaRDD<Integer> intNumbers = validNumbers.map(number -> Integer.valueOf(number));
+        JavaRDD<Integer> intNumbers = validNumbers.map(Integer::valueOf);
 
         System.out.println("Sum is: " + intNumbers.reduce((x, y) -> x + y));
     }

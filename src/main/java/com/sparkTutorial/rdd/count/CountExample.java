@@ -14,7 +14,7 @@ public class CountExample {
 
     public static void main(String[] args) throws Exception {
         Logger.getLogger("org").setLevel(Level.ERROR);
-        SparkConf conf = new SparkConf().setAppName("count").setMaster("local[*]");
+        SparkConf conf = new SparkConf().setAppName("count").setMaster("local[2]");
         JavaSparkContext sc = new JavaSparkContext(conf);
 
         List<String> inputWords = Arrays.asList("spark", "hadoop", "spark", "hive", "pig", "cassandra", "hadoop");
